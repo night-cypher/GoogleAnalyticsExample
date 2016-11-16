@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/container"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/bNextScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+
+            android:text="Track Activity"
+            />
+
+        <Button
+            android:id="@+id/bFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Track Fragment"
+            />
+
+        <Button
+            android:id="@+id/bEvent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Track Event"
+           />
+
+        <Button
+            android:id="@+id/bException"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Track Exception"
+           />
+
+        <Button
+            android:id="@+id/bCrashApp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="Track Crash"
+            />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:padding="10dp"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

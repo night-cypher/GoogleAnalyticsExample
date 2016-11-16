@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "914439761118",
+    "firebase_url": "https://pacific-smile-138523.firebaseio.com",
+    "project_id": "pacific-smile-138523",
+    "storage_bucket": "pacific-smile-138523.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914439761118:android:fcfef757a832647b",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914439761118-dmk2jteap0j188nnvc067cns12a22jhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCesQ6nHFSK_Fe2E95uvFZ6vTpIKWKwfZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914439761118:android:1445a8db943b58cd",
+        "android_client_info": {
+          "package_name": "com.questdot.firebaseanalyticsexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914439761118-dmk2jteap0j188nnvc067cns12a22jhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCesQ6nHFSK_Fe2E95uvFZ6vTpIKWKwfZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914439761118:android:5dfbe5df3a924e72",
+        "android_client_info": {
+          "package_name": "com.questdot.googleanalyticsexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914439761118-dmk2jteap0j188nnvc067cns12a22jhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCesQ6nHFSK_Fe2E95uvFZ6vTpIKWKwfZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
