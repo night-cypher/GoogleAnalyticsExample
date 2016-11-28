@@ -16,18 +16,13 @@ import com.google.android.gms.analytics.Tracker;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Tracker mTracker;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Analytics Integration
-        // Obtain the shared Tracker instance.
-        BaseApplication application = (BaseApplication) getApplication();
-        mTracker = application.getDefaultTracker();
 
         Button bNextScreen = (Button) findViewById(R.id.bNextScreen);
         Button bFragment = (Button) findViewById(R.id.bFragment);
@@ -46,8 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
 
-        mTracker.setScreenName("Main Activity");
-        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+        BaseApplication.getInstance().trackScreenView("Main Screen Now");
     }
 
     @Override
@@ -79,14 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bEvent:
-                Tracker t = ((BaseApplication) getApplication()).getDefaultTracker();
 
-                // Build and send an Event.
-                t.send(new HitBuilders.EventBuilder()
-                        .setCategory("Category")
-                        .setAction("Action")
-                        .setLabel("Label")
-                        .build());
+                BaseApplication.getInstance().trackEvent("Category","Action","Label");
+
                 Toast.makeText(MainActivity.this, "Event is recorded", Toast.LENGTH_LONG).show();
                 break;
 
@@ -103,11 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     Toast.makeText(MainActivity.this, "The Exception is: " + e, Toast.LENGTH_LONG).show();
 
-                    Tracker tracker = ((BaseApplication) getApplication()).getDefaultTracker();
-                    tracker.send(new HitBuilders.ExceptionBuilder()
-                            .setDescription(new StandardExceptionParser(MainActivity.this, null).getDescription(Thread.currentThread().getName(), e))
-                            .setFatal(false)
-                            .build());
+                    BaseApplication.getInstance().trackException(e);
                 }
 
 

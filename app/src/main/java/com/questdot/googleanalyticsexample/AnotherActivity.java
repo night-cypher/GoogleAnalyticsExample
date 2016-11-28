@@ -10,17 +10,12 @@ import com.google.android.gms.analytics.Tracker;
 public class AnotherActivity extends AppCompatActivity {
 
 
-    private Tracker mTracker;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_another);
 
-        //Analytics Integration
-        // Obtain the shared Tracker instance.
-        BaseApplication application = (BaseApplication) getApplication();
-        mTracker = application.getDefaultTracker();
+
 
 
     }
@@ -29,8 +24,7 @@ public class AnotherActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        mTracker.setScreenName("Another Activity");
-        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+        BaseApplication.getInstance().trackScreenView("Another Screen lo");
     }
 
 }

@@ -23,8 +23,7 @@ public class Fragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        BaseApplication application = (BaseApplication) getActivity().getApplication();
-        mTracker = application.getDefaultTracker();
+
 
     }
 
@@ -38,8 +37,7 @@ public class Fragment extends android.support.v4.app.Fragment {
     public void onResume() {
         super.onResume();
 
-        mTracker.setScreenName("Fragment");
-        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+        BaseApplication.getInstance().trackScreenView("Fragment");
 
     }
 
